@@ -16,29 +16,59 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="app/_bower_components/normalize-css/normalize.css" type="text/css" media="all" />
 
   <link rel="stylesheet" href="css/application.css" type="text/css" media="all" />
 
-  <script type="text/javascript" src="bower_components/modernizr/modernizr.js"></script>
+  <script type="text/javascript" src="app/_bower_components/modernizr/modernizr.js"></script>
 
 </head>
 
 <body>
-  <header role="banner" id="page_header">
-  </header>
-
-  <nav role="navigation" id="global_nav">
-  </nav>
-
-
   <div id="main" role="main">
+    <h1>Industry Analyzer</h1>
+    <p>Select up to four industries to compare</p>
+    <p class="note">(you can change these at any time)</p>
+
+    <ul class="industry-list">
+      <li class="industry-item industry-clothing">
+        <label for="toggle-clothing">Clothing &amp; Apparel</label>
+        <input type="checkbox" id="toggle-clothing" value="Clothing &amp; Apparel" />
+      </li>
+      <li class="industry-item industry-jewelry">
+        <label for="toggle-jewelry">Jewelry &amp; Accessories</label>
+        <input type="checkbox" id="toggle-jewelry" value="Jewelry &amp; Accessories" />
+      </li>
+      <li class="industry-item industry-bags">
+        <label for="toggle-bags">Bags &amp; Shoes</label>
+        <input type="checkbox" id="toggle-bags" value="Bags &amp; Shoes" />
+      </li>
+      <li class="industry-item industry-health">
+        <label for="toggle-health">Health &amp; Beauty</label>
+        <input type="checkbox" id="toggle-health" value="Health &amp; Beauty" />
+      </li>
+      <li class="industry-item industry-food">
+        <label for="toggle-food">Food &amp; Drink</label>
+        <input type="checkbox" id="toggle-food" value="Food &amp; Drink" />
+      </li>
+      <li class="industry-item industry-home">
+        <label for="toggle-home">Home &amp; Garden</label>
+        <input type="checkbox" id="toggle-home" value="Home &amp; Garden" />
+      </li>
+      <li class="industry-item industry-electronics">
+        <label for="toggle-electronics">Electronics</label>
+        <input type="checkbox" id="toggle-electronics" value="Electronics" />
+      </li>
+      <li class="industry-item industry-random">
+        <label for="toggle-random">Random</label>
+        <input type="checkbox" id="toggle-random" value="Random" />
+      </li>
+    </ul>
+
+    <button class="submit">Submit</button>
   </div>
 
-  <footer role="contentinfo" id="page_footer">
-  </footer>
-
-  <script src="bower_components/jquery/jquery.js"></script>
+  <script src="app/_bower_components/jquery/dist/jquery.js"></script>
   <script src="js/application.js"></script>
 
 </body>
