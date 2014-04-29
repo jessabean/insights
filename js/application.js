@@ -1,22 +1,18 @@
 $( document ).ready(function() {
+  var selectedIndustries = [];
 
   function printIndustries() {
-    var selectedIndustries = [];
-    // var input = $('input[type="checkbox"]:checked');
-
-    // $(input).each(function() {
-    //   // selectedIndustries.push($(this).val());
-    //     alert("super");
-    // });
-
-     $('input[type="checkbox"]:checked').each(function(){
-        selectedIndustries.push($(this).val());
-      });
-    console.log(selectedIndustries); 
+    $('input[type="checkbox"]:checked').each(function(){
+      selectedIndustries.push($(this).val());
+    });
+    alert(selectedIndustries);
   }
 
   $('button').click(function() {
-    printIndustries();
+    if($('input[type="checkbox"]:checked').length > 4) {
+      alert("You can only select 4 industries");
+    } else {
+      printIndustries();
+    }
   })
-    
 });
