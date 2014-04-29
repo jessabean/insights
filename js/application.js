@@ -12,6 +12,7 @@ $( document ).ready(function() {
     if($('input[type="checkbox"]:checked').length > 4) {
       alert("You can only select 4 industries");
     } else {
+      $('#main').load('./confirm.html #main > *');
       printIndustries();
     }
   })
