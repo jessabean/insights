@@ -5,7 +5,11 @@ function printIndustries(industries) {
 }
 
 $('input[type=checkbox]').click(function() {
-  selectedIndustries.push($(this).val());
+  if($(this).prop('checked')) {
+    selectedIndustries.push($(this).val());
+  } else {
+    selectedIndustries.splice($.inArray($(this), selectedIndustries),1);
+  }
 })
 
 $('button').click(function() {
