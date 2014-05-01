@@ -13,10 +13,12 @@ $('input[type=checkbox]').click(function() {
 })
 
 $('button').click(function() {
+  var loadUrl = './confirm.html #main > *';
+
   if(selectedIndustries.length > 4) {
-    alert("You can only select 4 industries");
+    alert("You can only select 4 industries!");
   } else {
-    $('#main').load('./confirm.html #main > *', function() {
+    $('#main').load(loadUrl, function() {
       printIndustries(selectedIndustries);
     });
   }
