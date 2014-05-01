@@ -15,7 +15,9 @@ $('input[type=checkbox]').click(function() {
 $('button').click(function() {
   var loadUrl = './confirm.html #main > *';
 
-  if(selectedIndustries.length > 4) {
+  if(selectedIndustries.length < 1) {
+    alert("Please choose an industry.");
+  } else if(selectedIndustries.length > 4) {
     alert("You can only select 4 industries!");
   } else {
     $('#main').load(loadUrl, function() {
