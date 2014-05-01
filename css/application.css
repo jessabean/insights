@@ -42,16 +42,19 @@ h1 {
 
 label {
   background: rgba(217, 222, 225, 0.1);
+  color: rgba(255, 255, 255, 0.3);
   display: block;
   height: 225px;
   line-height: 225px;
+  padding-top: 85px;
   text-align: center;
   width: 225px; }
   label:hover {
     cursor: pointer; }
 
 input[type=checkbox]:checked + label {
-  background: #65bae1; }
+  background: #65bae1;
+  color: white; }
 
 input[type=checkbox] {
   opacity: 0;
@@ -78,3 +81,91 @@ input[type=checkbox] {
   font-size: 24px;
   margin: 0 auto;
   width: 320px; }
+
+.industry-clothing label {
+  background-image: url("../img/clothing-lite.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+.industry-clothing input[type=checkbox]:checked + label {
+  background-image: url("../img/clothing.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+
+.industry-jewelry label {
+  background-image: url("../img/jewelry-lite.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+.industry-jewelry input[type=checkbox]:checked + label {
+  background-image: url("../img/jewelry.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+
+.industry-bags label {
+  background-image: url("../img/bags-lite.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+.industry-bags input[type=checkbox]:checked + label {
+  background-image: url("../img/bags.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+
+.industry-health label {
+  background-image: url("../img/health-lite.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+.industry-health input[type=checkbox]:checked + label {
+  background-image: url("../img/health.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+
+.industry-food label {
+  background-image: url("../img/food-lite.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+.industry-food input[type=checkbox]:checked + label {
+  background-image: url("../img/food.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+
+.industry-home label {
+  background-image: url("../img/home-lite.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+.industry-home input[type=checkbox]:checked + label {
+  background-image: url("../img/home.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+
+.industry-electronics label {
+  background-image: url("../img/electronics-lite.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+.industry-electronics input[type=checkbox]:checked + label {
+  background-image: url("../img/electronics.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+
+.industry-random label {
+  background-image: url("../img/random-lite.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }
+.industry-random input[type=checkbox]:checked + label {
+  background-image: url("../img/random.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 160px 160px; }

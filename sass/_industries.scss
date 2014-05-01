@@ -24,9 +24,11 @@ $item_gutter:  30px;
 
 label {
   background: rgba($slate_light, 0.1);
+  color: rgba($white, 0.3);
   display: block;
   height: $item_size;
   line-height: $item_size;
+  padding-top: 85px;
   text-align: center;
   width: $item_size;
 
@@ -37,6 +39,7 @@ label {
 
 input[type=checkbox]:checked + label {
   background: $blue;
+  color: $white;
 }
 
 
@@ -69,4 +72,34 @@ input[type=checkbox] {
   font-size: 24px;
   margin: 0 auto;
   width: 320px;
+}
+
+
+// Industries Icons
+
+$industries:
+clothing,
+jewelry,
+bags,
+health,
+food,
+home,
+electronics,
+random;
+
+@each $industry in $industries {
+  .industry-#{$industry} {
+    label {
+      background-image: url('../img/#{$industry}-lite.svg');
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 160px 160px;
+    }
+    input[type=checkbox]:checked + label {
+      background-image: url('../img/#{$industry}.svg');
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 160px 160px;
+    }
+  }
 }
