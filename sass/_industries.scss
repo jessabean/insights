@@ -1,3 +1,6 @@
+// ===========================================================================
+// List of industries
+// ===========================================================================
 $item_size:    225px;
 $item_gutter:  30px;
 
@@ -74,9 +77,9 @@ input[type=checkbox] {
   width: 320px;
 }
 
-
+// ===========================================================================
 // Industries Icons
-
+// ===========================================================================
 $industries:
 clothing,
 jewelry,
@@ -101,5 +104,35 @@ random;
       background-repeat: no-repeat;
       background-size: 160px 160px;
     }
+  }
+}
+
+// ===========================================================================
+// Email Form
+// ===========================================================================
+#insight-form {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 480px;
+}
+
+input[type=email] {
+  background: rgba($white, 0.1);
+  border: none;
+  border-radius: 4px 0 0 4px;
+  box-shadow: none;
+  float: left;
+  font-size: 25px;
+  height: 65px;
+  padding: 10px;
+  position: relative;
+  width: calc(100% - 150px);
+
+  & + .btn-submit {
+    border-radius: 0 4px 4px 0;
+    float: left;
+    display: inline-block;
+    height: 65px;
+    width: 150px;
   }
 }
