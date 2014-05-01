@@ -5,10 +5,12 @@ function printIndustries(industries) {
 }
 
 $('input[type=checkbox]').click(function() {
+  var currentIndex = $.inArray($(this), selectedIndustries);
+
   if($(this).prop('checked')) {
     selectedIndustries.push($(this).val());
   } else {
-    selectedIndustries.splice($.inArray($(this), selectedIndustries),1);
+    selectedIndustries.splice(currentIndex,1);
   }
 })
 
