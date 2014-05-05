@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          'css/application.css' : 'sass/application.scss'
+          'public/css/application.css' : 'sass/application.scss'
         }
       }
     },
@@ -13,6 +13,21 @@ module.exports = function(grunt) {
       css: {
         files: '**/*.scss',
         tasks: ['sass']
+      }
+    },
+    copy: {
+      main: {
+        files: [
+          // makes all src relative to cwd
+          {
+            expand: true,
+            cwd: 'app/',
+            src: ['**',
+            '!**/node_modules/**'
+            ],
+            dest: 'public/'
+          }
+        ]
       }
     },
     connect: {
@@ -28,6 +43,7 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.registerTask('default', [
     'connect:server',
-    'watch'
+    'watch',
+    'copy'
   ]);
 }
