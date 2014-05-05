@@ -9,6 +9,20 @@ module.exports = function(grunt) {
         }
       }
     },
+    watch: {
+      css: {
+        files: '**/*.scss',
+        tasks: ['sass', 'sync']
+      },
+      scripts: {
+        files: 'app/js/**/*.js',
+        tasks: ['sync']
+      },
+      html: {
+        files: 'app/**/*.html',
+        tasks: ['sync']
+      }
+    },
     sync: {
       main: {
         files: [{
@@ -20,12 +34,6 @@ module.exports = function(grunt) {
           dest: 'public',
         }],
         verbose: true // Display log messages when copying files
-      }
-    },
-    watch: {
-      css: {
-        files: '**/*.scss',
-        tasks: ['sass', 'sync']
       }
     },
     connect: {
@@ -41,7 +49,7 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.registerTask('default', [
     'connect:server',
-    'sync',
-    'watch'
+    'watch',
+    'sync'
   ]);
 }
