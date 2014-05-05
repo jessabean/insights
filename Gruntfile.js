@@ -9,25 +9,23 @@ module.exports = function(grunt) {
         }
       }
     },
+    sync: {
+      main: {
+        files: [{
+          cwd: 'app',
+          src: [
+            '**',
+            '!**/node_modules/**'
+          ],
+          dest: 'public',
+        }],
+        verbose: true // Display log messages when copying files
+      }
+    },
     watch: {
       css: {
         files: '**/*.scss',
-        tasks: ['sass']
-      }
-    },
-    copy: {
-      main: {
-        files: [
-          // makes all src relative to cwd
-          {
-            expand: true,
-            cwd: 'app/',
-            src: ['**',
-            '!**/node_modules/**'
-            ],
-            dest: 'public/'
-          }
-        ]
+        tasks: ['sass', 'sync']
       }
     },
     connect: {
@@ -43,7 +41,7 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.registerTask('default', [
     'connect:server',
-    'watch',
-    'copy'
+    'sync',
+    'watch'
   ]);
 }
