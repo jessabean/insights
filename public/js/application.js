@@ -1,9 +1,5 @@
 var selectedIndustries = [];
 
-function printIndustries(industries) {
-  $('.selected-industries').text(industries.join(', '));
-}
-
 $('input[type=checkbox]').click(function() {
   var currentIndex = $.inArray($(this), selectedIndustries);
 
